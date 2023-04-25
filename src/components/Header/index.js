@@ -1,6 +1,7 @@
 import styles from './Header.module.scss'
 import classNames from 'classnames/bind'
 import { Link } from 'react-router-dom'
+import { publicRoutes } from '../routes'
 
 const cx = classNames.bind(styles)
 
@@ -22,10 +23,9 @@ export default function Header() {
             <div className={cx('header-holder')}></div>
             <div className={cx('header')}>
                 <ul className={cx('header-container')}>
-                    <NavButton content={'home'} path='/' />
-                    <NavButton content={'my garbage dump'} path='/garbagedump' />
-                    <NavButton content={'playground'} path='/playground' />
-                    <NavButton content={'about'} path='/about' />
+                    {publicRoutes.map((item) => {
+                        return <NavButton content={item.content} path={item.path} />
+                    })}
                 </ul>
             </div>
         </div>

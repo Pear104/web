@@ -4,8 +4,8 @@ import Garbagedump from "../pages/Garbagedump"
 import Playground from "../pages/Playground"
 
 export const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/garbagedump', component: Garbagedump },
-    { path: '/playground', component: Playground },
+    { content: 'home', path: '', component: Home },
+    { content: 'about', path: process.env.PUBLIC_URL + '/about', component: About },
+    { content: 'dump', path: process.env.PUBLIC_URL + '/garbagedump', component: Garbagedump },
+    { content: 'playground', path: process.env.PUBLIC_URL + '/playground', component: Playground },
 ]
