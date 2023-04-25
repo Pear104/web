@@ -3,17 +3,15 @@ import Header from './components/Header'
 import styles from './App.module.scss'
 import classNames from 'classnames/bind';
 import { publicRoutes } from './components/routes';
-import Home from './components/pages/Home';
 
 const cx = classNames.bind(styles)
 
 function App() {
   return (
-    <Router basename='/web'>
+    <Router>
       <div className="App">
         <Header />
         <div className={cx('content-container')}>
-          {/* <Home /> */}
           <Routes>
             {publicRoutes.map((route, index) => {
               const Page = route.component
