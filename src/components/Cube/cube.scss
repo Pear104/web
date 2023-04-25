@@ -1,0 +1,50 @@
+.cube {
+    width: auto;
+    height: auto;
+    display: block;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateX(-45deg) rotateY(45deg);
+    animation: turnAround 4s infinite linear;
+
+    @keyframes turnAround {
+        100% {
+            rotate: 0 1 0 360deg;
+        }
+    }
+
+    .face {
+        border: 1px solid black;
+    }
+
+    .front {
+        position: absolute;
+        background-color: lime;
+    }
+
+    .back {
+        position: absolute;
+        background-color: yellow;
+
+    }
+
+    .top {
+        position: absolute;
+        background-color: blueviolet;
+    }
+
+    .bottom {
+        position: absolute;
+        background-color: deeppink;
+    }
+
+    .left {
+        position: absolute;
+        background-color: aqua;
+    }
+
+    .right {
+        position: absolute;
+        background-color: orange;
+    }
+}
